@@ -79,6 +79,8 @@ fn main() {
         println!("Jaysen Lestari's Komputer: done!");
     });
 
+    println!("Jaysen Lestari's Komputer: hey hey");
+
     drop(spawner);
     executor.run();
 }
