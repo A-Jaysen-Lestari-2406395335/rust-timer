@@ -79,8 +79,21 @@ fn main() {
         println!("Jaysen Lestari's Komputer: done!");
     });
 
+
+    spawner.spawn(async {
+        println!("Jaysen Lestari's Komputer: howdy-2!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Jaysen Lestari's Komputer: done-2!");
+    });
+
+    spawner.spawn(async {
+        println!("Jaysen Lestari's Komputer: howdy-3!");
+        TimerFuture::new(Duration::new(2, 0)).await;
+        println!("Jaysen Lestari's Komputer: done-3!");
+    });
+
     println!("Jaysen Lestari's Komputer: hey hey");
 
-    drop(spawner);
+    // drop(spawner);
     executor.run();
 }
